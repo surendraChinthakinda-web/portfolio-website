@@ -20,7 +20,7 @@ function App() {
         <Navbar />
 
         {/* Main Content */}
-        <main className="content">
+        <div className="content">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
@@ -29,7 +29,7 @@ function App() {
             <Route path="/intern" element={<Internship />} />
             <Route path="*" element={<Home />} />
           </Routes>
-        </main>
+        </div>
 
         {/* Footer */}
         <footer className="footer">
