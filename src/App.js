@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom'; // Changed to HashRouter
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 
 import { FaEnvelope, FaGithub, FaLinkedin, FaInstagram, FaFacebook } from 'react-icons/fa';
@@ -7,7 +7,7 @@ import { FaEnvelope, FaGithub, FaLinkedin, FaInstagram, FaFacebook } from 'react
 import Home from './components/Home/home';
 import About from './components/About/about';
 import Contact from './components/Contact/contact';
-import Education  from './components/Education/edu';
+import Education from './components/Education/edu';
 import Internship from './components/Internship/intern';
 
 import Navbar from './components/Navbar/nav';
@@ -15,18 +15,21 @@ import Navbar from './components/Navbar/nav';
 function App() {
   return (
     <Router>
-      <div className='container'>
+      <div className="container">
         {/* Navbar */}
         <Navbar />
-        
-        {/* Routes */}
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/education" element={<Education />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/intern" element={<Internship />} />
-        </Routes>
+
+        {/* Main Content */}
+        <main className="content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/education" element={<Education />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/intern" element={<Internship />} />
+            <Route path="*" element={<Home />} />
+          </Routes>
+        </main>
 
         {/* Footer */}
         <footer className="footer">

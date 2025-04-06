@@ -7,16 +7,27 @@
 
 html, body {
   height: 100%;
-  width: 100%;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  overflow-x: hidden; /* Prevent horizontal scroll */
+  overflow-x: hidden;
 }
 
-/* Allow vertical scroll */
+/* Sticky Layout Base */
 body {
-  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+}
+
+/* Navbar Styling */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -73,7 +84,6 @@ body {
 }
 
 /* Responsive Design */
-
 @media (max-width: 768px) {
   .nav-links {
     flex-direction: column;
@@ -107,12 +117,14 @@ body {
     padding: 8px 14px;
   }
 }
+
+/* Footer Styling */
 .footer {
   background-color: #1a1a1a;
   color: #fff;
   padding: 25px 0;
   text-align: center;
-  margin-top: 40px;
+  margin-top: auto;
 }
 
 .footer-content {

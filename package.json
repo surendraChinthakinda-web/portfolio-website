@@ -2,7 +2,9 @@
   "name": "my-react-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://surendraChinthakinda-web.github.io/portfolio-website",
+  "homepage": "https://surendrachinthakinda-web.github.io/portfolio-website",
+
+
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
