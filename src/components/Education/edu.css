@@ -1,0 +1,46 @@
+.education {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .education h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #222;
+    margin-bottom: 40px;
+  }
+  
+  .edu-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+  
+  .edu-card {
+    background-color: #fff;
+    padding: 25px;
+    width: 320px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    border-left: 5px solid #007bff;
+  }
+  
+  .edu-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .edu-card h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #007bff;
+  }
+  
+  .edu-card p {
+    margin: 6px 0;
+    color: #333;
+    line-height: 1.4;
+  }
+  

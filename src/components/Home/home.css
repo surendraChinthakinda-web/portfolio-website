@@ -1,0 +1,152 @@
+.home {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 50px;
+    background: linear-gradient(to right, #fdfbfb, #ebedee);
+    min-height: 100vh;
+  }
+  
+  .home-content {
+    flex: 1;
+    max-width: 600px;
+  }
+  
+  .home-content h1 {
+    font-size: 48px;
+    color: #222;
+  }
+  
+  .home-content h2 {
+    font-size: 28px;
+    color: #f75242;
+    margin: 10px 0;
+  }
+  
+  .home-content p {
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #444;
+  }
+  
+  .buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+  }
+  
+  .btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .btn.primary {
+    background-color: #f75242;
+    color: white;
+  }
+  
+  .btn.primary:hover {
+    background-color: #e04433;
+  }
+  
+  .btn.secondary {
+    background-color: transparent;
+    border: 2px solid #f75242;
+    color: #f75242;
+  }
+  
+  .btn.secondary:hover {
+    background-color: #f75242;
+    color: white;
+  }
+  
+  .home-image {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .home-image img {
+    width: 90%;
+    max-width: 400px;
+    border-radius: 12px;
+  }
+  
+  /* Responsive for smaller screens */
+  @media (max-width: 768px) {
+    .home {
+      flex-direction: column;
+      padding: 40px 20px;
+      text-align: center;
+    }
+  
+    .buttons {
+      justify-content: center;
+    }
+  
+    .home-content h1 {
+      font-size: 36px;
+    }
+  
+    .home-content h2 {
+      font-size: 22px;
+    }
+  }
+  
+
+  .home-sections {
+    margin-top: 40px;
+    width: 100%;
+  }
+  
+  .section {
+    margin-bottom: 40px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+  
+  .section h3 {
+    color: #f75242;
+    margin-bottom: 10px;
+  }
+  
+  .section ul {
+    list-style: disc;
+    padding-left: 20px;
+  }
+  
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .skills span {
+    background: #eee;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+  }
+  
+  /* Large screen adjustments */
+  @media (min-width: 1200px) {
+    .home {
+      padding: 80px 100px;
+    }
+  
+    .home-content h1 {
+      font-size: 56px;
+    }
+  
+    .home-content h2 {
+      font-size: 32px;
+    }
+  }
+  
