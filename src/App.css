@@ -1,29 +1,31 @@
-/* Reset and base styles */
+/* Base Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html, body {
+html, body, #root {
   height: 100%;
+  background-color: #f9f9f9;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  overflow-x: hidden;
 }
 
-/* Full-height flex layout */
-.container {
+/* Layout Wrapper */
+.app-wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-/* Main content should expand */
-.content {
+/* Main Content Area */
+.main-content {
   flex: 1;
+  padding: 1rem;
+  background-color: #f9f9f9;
 }
 
-/* Navbar Styling */
+/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -41,8 +43,6 @@ html, body {
   font-size: 22px;
   font-weight: 700;
   color: #1a1a1a;
-  text-transform: uppercase;
-  letter-spacing: 1px;
 }
 
 .nav-links {
@@ -79,12 +79,13 @@ html, body {
   background-color: #e34432;
 }
 
-/* Footer Styling */
+/* Footer */
 .footer {
   background-color: #1a1a1a;
   color: #fff;
   padding: 25px 0;
   text-align: center;
+  width: 100%;
   margin-top: auto;
 }
 

@@ -1,31 +1,57 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './nav.css';
 
 const Navbar = () => {
   const navigate = useNavigate();
+  const [isMenuOpen, setMenuOpen] = useState(false);
 
   const handleConsultClick = () => {
     navigate('/contact');
+    setMenuOpen(false);
+  };
+
+  const toggleMenu = () => {
+    setMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setMenuOpen(false);
   };
 
   return (
     <header className="navbar">
       <div className="logo">
         <img
-          src="https://media.licdn.com/dms/image/v2/D5603AQGKu6mQzLqyTA/profile-displayphoto-shrink_800_800/B56ZYEhbIUH0Ac-/0/1743832595858?e=1749686400&v=beta&t=dsQ2a5-NB5JOql4QUpLvhxfAN-G5wfTSoZ8oWPXULKw"
-          alt="Surendra"
-          className="profile-image"
+          src="https://logowiki.net/wp-content/uploads/imgp/CS-Logo-1-8652.png"
+          alt="CS Logo"
         />
-        <span>Surendra Chinthakinda</span>
+        <span>Surendra</span>
       </div>
-      <nav className="nav-links">
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/education">Education</Link>
-        <Link to="/intern">Internship & Projects</Link>
+
+      <div className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
+        {/* Mobile only logo & name */}
+        <div className="nav-header">
+          <img
+            src="https://logowiki.net/wp-content/uploads/imgp/CS-Logo-1-8652.png"
+            alt="CS Logo"
+          />
+          <span>Surendra</span>
+        </div>
+
+        <Link to="/" onClick={closeMenu}>Home</Link>
+        <Link to="/about" onClick={closeMenu}>About</Link>
+        <Link to="/education" onClick={closeMenu}>Education</Link>
+        <Link to="/skills" onClick={closeMenu}>Skills</Link>
+        <Link to="/intern" onClick={closeMenu}>Internship & Projects</Link>
         <button className="cta-button" onClick={handleConsultClick}>Contact Me</button>
-      </nav>
+      </div>
+
+      <div className="hamburger" onClick={toggleMenu}>
+        <div className="bar"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
+      </div>
     </header>
   );
 };
